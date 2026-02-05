@@ -5,7 +5,7 @@ from openai import AzureOpenAI
 
 endpoint = os.getenv("ENDPOINT_URL", "https://trails-foundary.cognitiveservices.azure.com/")
 deployment = os.getenv("DEPLOYMENT_NAME", "TRAILS_trial")
-subscription_key = os.getenv("AZURE_OPENAI_API_KEY", "REPLACE_WITH_YOUR_KEY_VALUE_HERE")
+subscription_key = os.getenv("AZURE_OPENAI_API_KEY", "9xx4y1U3UC2m3bgi6SEJxEPx4G1uOmWeCE3D7z8O5NeCRd7TVX0kJQQJ99CAACYeBjFXJ3w3AAAAACOGqyTn")
 
 # Initialize Azure OpenAI client with key-based authentication
 client = AzureOpenAI(
