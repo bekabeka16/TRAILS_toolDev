@@ -2,10 +2,10 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-
 from rag import answer_question
 
 app = FastAPI(title="Reading Assistant Demo")
@@ -14,7 +14,7 @@ app = FastAPI(title="Reading Assistant Demo")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # demo only; tighten later
-    allow_credentials=True,
+    allow_credentials=False, 
     allow_methods=["*"],
     allow_headers=["*"],
 )

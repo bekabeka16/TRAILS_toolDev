@@ -11,7 +11,7 @@ def _get_clients():
     aoai = AzureOpenAI(
         azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"],
         api_key=os.environ["AZURE_OPENAI_API_KEY"],
-        api_version=os.environ.get("AZURE_OPENAI_API_VERSION", "2024-10-21"),
+        api_version=os.environ.get("AZURE_OPENAI_API_VERSION", "2024-10-21-preview"),
     )
 
     # Azure AI Search client
@@ -121,7 +121,7 @@ def answer_question(question: str, course_id: str | None = None, tenant_id: str 
         "Answer with citations."
     )
 
-    chat_deployment = os.environ["AZURE_OPENAI_CHAT_DEPLOYMENT"]
+    chat_deployment = os.environ["AZURE_OPENAI_DEPLOYMENT"]
     resp = aoai.chat.completions.create(
         model=chat_deployment,
         messages=[
