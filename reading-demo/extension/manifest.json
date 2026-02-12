@@ -1,0 +1,14 @@
+{
+  "name": "Reading Assistant Demo",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Reading Assistant",
+    "default_popup": "popup.html"
+  },
+  "permissions": [],
+  "host_permissions": [
+    "http://127.0.0.1:8000/*",
+    "http://localhost:8000/*"
+  ]
+}
